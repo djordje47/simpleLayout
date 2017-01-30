@@ -8,7 +8,7 @@ body{
 	*/
 	padding: 0;
 	margin: 0;
-	background-color: #f4f4f4;
+	background-color: #ecf0f1;
 }
 
 /* Global */
@@ -18,9 +18,19 @@ body{
 	overflow: hidden; /* We don't want any scrollbars appearing */
 }
 
+.dark{
+	padding: 15px;
+	background-color: #34495e;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-right: 40px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+}
+
 .button_1{
 	height: 38px;
-	background-color: #e8491d;
+	background-color: #27ae60;
 	border: none;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -38,7 +48,7 @@ header{
 	color: #ffffff;
 	padding-top: 30px;
 	min-height: 70px; /* Min-height because of the responsive design */
-	border-bottom: #e8491d 3px solid;
+	border-bottom: #27ae60 3px solid;
 }
 
 header a{
@@ -68,7 +78,7 @@ header nav{
 }
 
 header .highlight, header .current a{
-	color: #e8491d;
+	color: #27ae60;
 	font-weight: bold;
 }
 
@@ -132,10 +142,68 @@ header a:hover{
 	width: 90px;
 }
 
+/* Sidebar */
+aside#sidebar{
+	float: right;
+	width: 30%;
+	margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+	width: 90%;
+	text-shadow: 10;
+	padding: 5px;
+}
+
+article#main-col{
+	float: left;
+	width: 65%;
+}
+
+/* Services */
+ul#services li{
+	list-style: none;
+	padding: 20px;
+	border: #cccccc solid 1px;
+	margin-bottom: 5px;
+	background-color: #e6e6e6;
+}
+
 footer{
 	padding: 20px;
 	margin-top: 20px;
 	color: #ffffff;
 	text-align: center;
-	background-color: #e8491d;
+	background-color: #27ae60;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+	header #branding,
+	header nav,
+	header nav li,
+	#newsletter h1,
+	#newsletter form,
+	#boxes .box,
+	article#main-col,
+	aside#sidebar{
+		float: none;
+		margin: 0px;
+		text-align: center;
+		width: 100%;
+	}
+	header{
+		padding-bottom: 10px;
+	}
+	#showcase h1{
+		margin-top: 25px;
+	}
+	#newsletter button{
+		display: block;
+		width: 100%;
+	}
+	#newsletter form input[type="email"]{
+		width: 100%;
+		margin-bottom: 5px;
+	}
 }
