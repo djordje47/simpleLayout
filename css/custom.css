@@ -90,15 +90,18 @@ header a:hover{
 /* ShowCase */
 #showcase{
 	min-height: 400px;
-	background: url('../img/showcase.jpg') no-repeat 0 -400px;
+	/*background: url('../img/showcase.jpg') no-repeat 0 -400px;*/
 	text-align: center;
 	color: #ffffff;
 }
 
-#shocase .showCaseBackground{
+#showcase, .showCaseBackground{
     /*min-height: 400px;*/
     background-size: cover;
-    
+    min-height: 400px;
+    max-height: 400px;
+    max-width: 100%;
+    min-width: 768px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
